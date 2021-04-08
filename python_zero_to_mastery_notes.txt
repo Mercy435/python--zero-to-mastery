@@ -1,1 +1,43 @@
 pep = python enhancement proposals ,, community which standardize ways to write code..pep8, style guide for python codes
+anaconda contains all tools needed for data science and machine learning
+jupyter notebook helps visualize easily
+everything in python is an object
+python is an object oriented programming language because everything is built on class keyword and methods are used
+to perform actions on them
+an object has methods and attributes that can be accessed with the .method
+we can create our own datatypes with diff attributes and methods
+oop
+oop is a paradigm - it helps us manage our codes, helps structure codes in a way that is easier to maintain,
+extend and rewrite. as codes get bigger, it helps us organize millions of codes
+code real life objects
+we can create our own class using the class keyword then the name of the class in camelcase(capitalize each word)
+#instantiate means creating instance(object) from a class
+a class is a blueprint for creating objects, it has properties and methods
+The __init__() function is called automatically every time the class is being used to create a new object.
+when writing code, try to be DRY(do not repeat yourself)
+when a  function doesnt return anything, we get none
+one piece of code, one blueprint(class) is used to create multiple objects at different positions in memory,
+they are distinct
+oop help us add functionalities and mimic the real world
+helps us write codes that are repeatable, organized, and memory efficient
+attributes are dynamic pieces of data, they are unique to specific objects
+Class object attribute is diff from regular attribute, its not dynamic and its in the same line as the method
+note that self refers to the class
+init is used when we want to create a custom object i.e. instantiate
+creating a method for the class
+there are three methods
+1. instace method- the normal one that uses self
+2. class method use cls as the first parameter in def the method
+it can be used without instantiating
+3. static method- this works as the above but doesnt the cls keyword and hence doesnt have access to the class
+this is used when we don't care about the class attribute
+Instance Methods: The most common method type. Able to access data and properties unique to each instance.
+Static Methods: Cannot access anything else in the class. Totally self-contained code.
+Class Methods: Can access limited methods in the class. Can modify class specific details.
+
+all of this (oop) is to create our datatype that models the real world. help structure our code
+
+four pillars of oop
+1. encapsulation - binding of data and functions that manipulate the data to an object to keep all in a box
+so users, codes and machines can interact with easily. the data and functions are the attributes and methods
+functionalities are encapsulated for use(.methods)
