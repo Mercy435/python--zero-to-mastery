@@ -63,6 +63,16 @@ the same method name, and the method name in turn act differently based on what 
 use super()__init__(param)
 or name of the parent class__init__(self,param)
 
+#introspection - determining the type of an object at runtime(when the code is running)
+python uses some functions to introspect codes
+dir -  gives all of the method and attribute an object has
+doing a . does introspection
+#dunder magic methods
+these allow us to use python specific functions on objects created through the class
+dunder mthds are only modified when used on specific objects, it doesnt change their functions when used
+normally outside the scope of modification
 
+MRO - method resolution order
+shows u the order with which it checks, it uses the algorithmn depth first search-
 questions
 1. y wasnt it cat(pets) and just cat() 17

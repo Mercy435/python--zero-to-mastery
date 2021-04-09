@@ -240,3 +240,134 @@ my_cats = [Simon('Simon', 2), Sally('Sally', 3), Susan('Susan', 12)]
 my_pets = Pets(my_cats)
 # 4 Output all of the cats walking using the my_pets instance
 my_pets.walk()
+
+# INTROSPECTION
+print(dir(wizard1))  # gives all of the method and attribute an object has
+
+
+# dunder methods
+class Toy:
+    def __init__(self, color, age):
+        self.color = color
+        self.age = age
+        self.my_dict = {'name': 'Yoyo', 'has_pets': False}
+
+    def __str__(self):  # modifying dunder mthd str for object to behave in a certain way
+        return f'{self.color}'
+
+    def __len__(self):  # modifying len to suit ur function
+        return 5
+
+    def __del__(self):
+        # print('deleted')
+        pass
+
+    def __call__(self):  # it's used to call a function
+        return ('yes??')
+
+    def __getitem__(self, i):
+        return self.my_dict[i]
+
+
+action_figure = Toy('red', 0)
+print(action_figure.__str__())  # lines 256 and 257 gives the same output
+print(str('action_figure'))
+print(len(action_figure))
+# del action_figure
+print(action_figure())
+print(action_figure['name'])
+
+
+# exercise extending list
+# to make superlist have all of the attributes of list in python, use inheritance, that is superlist(list),
+# list becomes the parent class
+class SuperList(list):  # class
+    def __len__(self):
+        return 1000
+
+
+super_list1 = SuperList()  # object
+
+print(len(super_list1))
+super_list1.append(5)
+print(super_list1[0])
+print(issubclass(SuperList, list))
+print(issubclass(list, object))
+print(issubclass(list, SuperList))
+
+
+# multiple inheritance
+class U:
+    def log_in(self):
+        print('logged in')
+
+
+class W(U):
+    def __init__(self, name, power):
+        self.name = name
+        self.power = power
+
+    def attack(self):
+        print(f'attacking with power of {self.power}')
+
+
+class A(U):
+    def __init__(self, name, arrows):
+        self.name = name
+        self.arrows = arrows
+
+    def check_arows(self):
+        print(f'{self.arrows} remaining')
+
+    def run(self):
+        print('ran really fast')
+
+
+class HybridBorg(W, A):  # multiple inheritance
+    def __init__(self, name, power, arrows):
+        A.__init__(self, name, arrows)
+        W.__init__(self, name, power)
+
+
+hb1 = HybridBorg('chudi', 30, 100)
+print(hb1.run)
+print(hb1.check_arows())
+print(hb1.attack())
+print(hb1.log_in())
+
+
+# MRO method resolution order - a rule python follows when u run a method, which to run first ..
+# when there is a complicated multiple inheritance structure, mro is followed
+class C:
+    num = 10
+
+
+class D(C):
+    pass
+
+
+class E(C):
+    num = 1
+
+
+class F(D, E):
+    pass
+
+
+print(F.mro())  # shows u the order with which it checks, it uses the algorithmn depth first search
+print(F.num)  # 1
+F.__str__
+
+
+
+class X: pass
+class Y: pass
+class Z: pass
+class G(X, Y): pass # A
+class H(Y, Z): pass # B
+class M(H, G, Z):pass
+
+
+
+
+print(M.__mro__)
