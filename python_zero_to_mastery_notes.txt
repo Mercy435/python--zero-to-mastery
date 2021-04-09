@@ -28,16 +28,41 @@ creating a method for the class
 there are three methods
 1. instace method- the normal one that uses self
 2. class method use cls as the first parameter in def the method
-it can be used without instantiating
+it can be used without instantiating Methods: Cannot access anything else in the class. Totally self-contained code.
+Class Methods: Can access limited methods in the class. Can modify class specific details.
+
 3. static method- this works as the above but doesnt the cls keyword and hence doesnt have access to the class
 this is used when we don't care about the class attribute
 Instance Methods: The most common method type. Able to access data and properties unique to each instance.
-Static Methods: Cannot access anything else in the class. Totally self-contained code.
-Class Methods: Can access limited methods in the class. Can modify class specific details.
-
+Static
 all of this (oop) is to create our datatype that models the real world. help structure our code
 
 four pillars of oop
 1. encapsulation - binding of data and functions that manipulate the data to an object to keep all in a box
 so users, codes and machines can interact with easily. the data and functions are the attributes and methods
-functionalities are encapsulated for use(.methods)
+functionalities are encapsulated for use(.methods)  it helps us mimic what happens in the real world
+2. abstraction - hiding info and giving access only to whats necessary. only what the machine needs is provided per
+time, all other things are kept away. when u call a method or function, it just implements , u dont have to go to the
+python documentation to see how its run or whats done underneath the hood. we dont have to code certain things from
+scratch-
+private and public variables
+this concepts comes in play under abstraction in case of overwriting of our methods
+python uses an underscore to show private variables, it tells programmers not to use or touch that variable
+__ a convention in python, dunder method, inbuilt function, we usually dont use it to create variables
+3. inheritance - allows new objects take on properties of existing objects,, parent class and
+children/sub/derived classes
+#isinstance a builtin function to check for inheritance (instance, class)
+doing an object. brings all of the attributes, methods and dunder methods
+everything in python inherits from the base object class python comes with called object
+everthing in python is from the base object thats y dunder methods are available when u do a .
+4. polymorphism - poly means many, morphism means form. (many form). it refers to the way object classes can share
+the same method name, and the method name in turn act differently based on what objects call it
+
+
+# calling a method from a subclass of the parent class
+use super()__init__(param)
+or name of the parent class__init__(self,param)
+
+
+questions
+1. y wasnt it cat(pets) and just cat() 17

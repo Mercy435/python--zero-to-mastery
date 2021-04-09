@@ -15,7 +15,7 @@ class PlayerCharacter:  # make it singular
     membership = True  # class object attribute (to play the game u must be a member)
 
     # Init/ constructor function, whatever is after self(i.e, name is a parameter). it can take default characters
-    def __init__(self, name='anonymous', age=0): #default parameters
+    def __init__(self, name='anonymous', age=0):  # default parameters
         if self.membership:  # if PlayerCharacter.membership- membership is an attribute of PlayerCharacter
             # if age > 18:
             self.name = name  # self is used to refer to the class you create
@@ -96,10 +96,12 @@ class PlayerCharacter:
 player3 = PlayerCharacter.add_things(6, 3)  # method on the actual class(class method) to create another player
 print(player3.age)
 
-# summary of oop
+
+# 5 summary of oop
 class NameOfClass:  # classical oop-i.e use of classes, uses camelcase)
     class_attribute = 'value'
-    def __init__(self, param1, param2): # to instantiate objects
+
+    def __init__(self, param1, param2):  # to instantiate objects
         self.param1 = param1
         self.param2 = param2
 
@@ -118,3 +120,123 @@ class NameOfClass:  # classical oop-i.e use of classes, uses camelcase)
         pass
     # all of this is to create our data type that models the real world
 
+
+# 6 inheritance example
+class User(object):  # class User: everything in python is from the base object
+    def sign_in(self):
+        print('logged in')
+
+    def attack(self):  # polymorphism doing wizard1.attack() overrides this cos the method is in the wizard class
+        print('do nothing')
+
+
+class Wizard(User):
+    def __init__(self, name, power):
+        self.name = name
+        self.power = power
+
+    def attack(self):
+        User.attack(self)
+        print(f'attacking with power of {self.power}')
+
+
+class Archer(User):
+    def __init__(self, name, num_arrows):
+        self.name = name
+        self.num_arrows = num_arrows
+
+    def attack(self):
+        print(f'attacking with arrows: arrows left- {self.num_arrows}')
+
+
+wizard1 = Wizard('Merlin', 50)
+archer1 = Archer('Arthur', 500)
+wizard1.sign_in()
+
+# polymorphism
+wizard1.attack()
+archer1.attack()
+
+
+def player_attack(char):
+    char.attack()
+
+
+player_attack(wizard1)
+player_attack(archer1)
+
+for char in [wizard1, archer1]:
+    char.attack()
+# isinstance a builtin function to check for inheritance (instance, class)
+print(isinstance(wizard1, Wizard))  # True
+print(isinstance(wizard1, User))  # True
+print(isinstance(wizard1, object))  # True
+
+
+# 7. calling a method from a subclass of the parent class
+class Gamer(object):
+    def __init__(self, email):
+        self.email = email
+
+    def sign_in(self):
+        print('logged in')
+
+
+class Wiz(Gamer):
+    def __init__(self, name, power, email):
+        super().__init__(email)  # this is a better alt than the code below, it doesnt take self
+        # Gamer.__init__(self, email)  # here
+        self.name = name
+        self.power = power
+
+
+wiz1 = Wiz("Merlin", 60, "merlin@gmail.com")
+print(wiz1.email)
+
+
+# 8. exercise pets everywhere
+class Pets(object):
+    animals = []
+
+    def __init__(self, animals):
+        self.animals = animals
+
+    def walk(self):
+        for animal in self.animals:
+            print(animal.walk())
+
+
+class Cat(Pets):
+    is_lazy = True
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def walk(self):
+        return f'{self.name} is just walking around'
+
+
+class Simon(Cat):
+    def sing(self, sounds):
+        return f'{sounds}'
+
+
+class Sally(Cat):
+    def sing(self, sounds):
+        return f'{sounds}'
+
+
+# 1 Add another Cat
+class Susan(Cat):
+    def sing(self, sounds):
+        return f'{sounds}'
+
+
+# 2 Create a list of all of the pets (create 3 cat instances from the above)
+my_cats = [Simon('Simon', 2), Sally('Sally', 3), Susan('Susan', 12)]
+
+# 3 Instantiate the Pet class with all your cats use variable my_pets
+my_pets = Pets(my_cats)
+# 4 Output all of the cats walking using the my_pets instance
+my_pets.walk()
