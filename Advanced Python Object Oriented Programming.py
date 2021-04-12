@@ -4,7 +4,7 @@ class BigObject:  # creating your class
     pass
 
 
-obj1 = BigObject()  # instantiate
+obj1 = BigObject()  # instantiate creating object
 obj2 = BigObject()  # instantiate
 obj3 = BigObject()  # instantiate
 print(type(obj1))
@@ -184,7 +184,7 @@ class Gamer(object):
 
 class Wiz(Gamer):
     def __init__(self, name, power, email):
-        super().__init__(email)  # this is a better alt than the code below, it doesnt take self
+        super().__init__(email)  # this is a better alt to the code below, it doesnt take self
         # Gamer.__init__(self, email)  # here
         self.name = name
         self.power = power
@@ -242,7 +242,7 @@ my_pets = Pets(my_cats)
 my_pets.walk()
 
 # INTROSPECTION
-print(dir(wizard1))  # gives all of the method and attribute an object has
+print(dir(wizard1))  # gives all of the methods and attributes an object has
 
 
 # dunder methods
@@ -270,11 +270,14 @@ class Toy:
 
 
 action_figure = Toy('red', 0)
-print(action_figure.__str__())  # lines 256 and 257 gives the same output
+print(action_figure)
+print(action_figure.color)
+print(action_figure.__str__())  # lines 273, 274 and 275 gives the same output
 print(str('action_figure'))
+
 print(len(action_figure))
 # del action_figure
-print(action_figure())
+print(action_figure())  # this does the call function
 print(action_figure['name'])
 
 
@@ -290,7 +293,7 @@ super_list1 = SuperList()  # object
 
 print(len(super_list1))
 super_list1.append(5)
-print(super_list1[0])
+# print(super_list1[0])
 print(issubclass(SuperList, list))
 print(issubclass(list, object))
 print(issubclass(list, SuperList))
@@ -359,15 +362,10 @@ print(F.num)  # 1
 F.__str__
 
 
-
 class X: pass
 class Y: pass
 class Z: pass
-class G(X, Y): pass # A
-class H(Y, Z): pass # B
-class M(H, G, Z):pass
-
-
-
-
+class G(X, Y): pass  # A
+class H(Y, Z): pass  # B
+class M(H, G, Z): pass
 print(M.__mro__)
