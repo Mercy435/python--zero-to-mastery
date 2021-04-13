@@ -99,7 +99,24 @@ it is impossible to have pure functions everywhere cos we have to interact with 
 lambda expressions are one time anonymous functions
 # lambda param: action(param)
 
+DECORATORS
+they have @name
+functions are first class citizens- they can be passed around like variables, like arguments
+
+HIGHER ORDER FUNCTION HOC e.g. map,reduce, filter
+#a function that accepts another function
+# or  a function that returns another function
+DECORATOR supercharges a function i.e. gives it more functionalities, it wraps a function and enhances it
+
+
 questions
 
 1. y wasnt it cat(pets) and just cat() 17
 2. # lines 273, 274 and 275 gives the same output
+questions on python
+1. video on 5 , 11, gui
+note that pylint is a checker for code, to check if the syntax is ok
+2.  lines 273, 274 and 275 gives the same output
+3.  print(super_list1[0]) line 296
+4. explain folder 8 vidoe 5, performance decorator
+5. explain folder 8 vidoe 6, authenticator decorator
