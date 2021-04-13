@@ -108,7 +108,15 @@ HIGHER ORDER FUNCTION HOC e.g. map,reduce, filter
 # or  a function that returns another function
 DECORATOR supercharges a function i.e. gives it more functionalities, it wraps a function and enhances it
 
-
+ERROR HANDLING
+am error that crashes the program is called an exception(built in exceptions)
+error handling allows python script keep running even if there are errors
+type error- btw diff data typesthat are incompatible
+syntax error - nt a standard python syntax
+name error - undefined name
+index error - index not available
+key error - for dict , accessing a key that doesnt exist
+zero division error
 questions
 
 1. y wasnt it cat(pets) and just cat() 17
