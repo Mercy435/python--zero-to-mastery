@@ -117,6 +117,18 @@ name error - undefined name
 index error - index not available
 key error - for dict , accessing a key that doesnt exist
 zero division error
+Generator
+they are functions
+generators allow us generate sequence of values over time. uses keyword yield and it can pause and resume functions
+
+# with generators we dont have to hold things in memory and hence perform things quickly
+# generators are useful in calculating large set of data
+# generators are faster than list when we want to loop a large range of data
+
+MODULES is a way of organizing codes,, each .py file is a module
+use snake case in naming modules
+a module has functions in them
+
 questions
 
 1. y wasnt it cat(pets) and just cat() 17
@@ -128,3 +140,5 @@ note that pylint is a checker for code, to check if the syntax is ok
 3.  print(super_list1[0]) line 296
 4. explain folder 8 vidoe 5, performance decorator
 5. explain folder 8 vidoe 6, authenticator decorator
+6. return and print in functions
+7. expian fibonacci exercise folder 9 video 5
