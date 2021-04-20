@@ -134,9 +134,21 @@ to import from a package, do import package_name.module_name
 in an ide a python package must have an __init__.py file, thats how a package is identified
 note that u can create a python package in anther python package
 PIP python install package
+to install ackages on pycharm, got to settings-project setting-python interpreter-click on the +,share for the package
+ and download
+
+pip install package name to install package and pip uninstall package to install
+do a pip3 list to list all the packages
+
+virtual environments help to have diff versions of packages and modules and use them on diff projects
+use pipenv
+or venv on pycharm by default.. its a virtual environmrnt created by pycharm
+creating a new project has its own venv which doesnt affect any other projects.. go to file and create new file.... its
+like a new universe
 
 Regular expressions are extremely useful in extracting information from text such as code, log files, spreadsheets,
 or even documents.
+
 A RegEx, or Regular Expression, is a sequence of characters that forms a search pattern.
 
 RegEx can be used to check if a string contains the specified search pattern.
@@ -159,7 +171,7 @@ note that pylint is a checker for code, to check if the syntax is ok
 8. utility in module,, y isnt any other name working
 9. for the utility,py file, how do i see the pycache
 10.^= whats it used for.. i saw it in random module
-11. folder 11, video 6, video 7, video 8..... 9 to 14 didnt work
+11. folder 11, video 6, video 7 sys isnt working... i cant call python3 1.py in the pycharm terminal
 12. debugging in python pdb folder 12
 13. file io folder 13
-14.
+14. explain the .start method

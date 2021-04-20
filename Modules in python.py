@@ -1,5 +1,5 @@
 # import utility
-
+'''
 # print(utility)
 # import shopping.more_shopping.shopping_cart
 
@@ -44,21 +44,48 @@ random.shuffle(my_list)
 print(my_list)
 
 # from random import shuffle
-'''
 import sys
+
 print(sys)  # built in module
 sys.argv
 
 # gaming guess exercise
-from random import randint
-import sys
 
-answer = randint(int(sys.argv[1]), int(sys.argv[2]))
+# 1. generate a no from 1-10
+from random import randint
+
+answer = randint(1, 10)
+
+# 2. input from user
+# guess = int(input("guess a number 1-10: "))  # convert str input to int
+
+# 3. check that input is a no from 1-10
+# 4. check if no is the right guess, otherwise
+# 5. ask user for input again
+while True:
+    guess = int(input("guess a number 1-10: "))
+    try:
+        # if guess > 0 and guess < 11:
+        if 0 < guess < 11:
+            if guess == answer:
+                print("you are a genius!")
+                break
+        else:
+            print('hey!, i said 1-10')
+    except ValueError:
+        print("please enter a number")
+        continue # this goes back to the while loop
+# give it ur start and last parameter using sys
+
+import sys
+import random
+
+answer = random.randint(int(sys.argv[1]), int(sys.argv[2]))
 
 while True:
     try:
-        guess = int(input(f'guess a number {sys.argv[1]}~{sys.argv[2]}:  '))
-        if  0 < guess < 11:
+        guess = int(input("guess a number 1-10: "))
+        if 0 < guess < 11:
             if guess == answer:
                 print('you are a genius!')
                 break
@@ -67,8 +94,56 @@ while True:
     except ValueError:
         print('please enter a number')
         continue
-        '''
+
+
 import platform
 
-x = platform.system()
+x = platform.system()  # prints windows
 print(x)
+'''
+import pyjokes
+
+joke = pyjokes.get_joke('en', 'neutral')
+print(joke)  # prints a line of joke
+
+# useful modules
+from collections import Counter, defaultdict, OrderedDict
+
+li = [1, 2, 3, 4, 5, 6, 7, 7]
+print(Counter(li))  # creates a dict or hashmap that keeps track of how many times an item occurs
+sentence = 'blah blah blah thinking about python'
+print(Counter(sentence))
+
+dictionary_ = {'a': 1, 'b': 2}
+print(dictionary_['a'])
+
+dictionary_ = defaultdict(int, {'a': 1, 'b': 2})
+print(int())
+
+dictionary_ = defaultdict(lambda: 'does not exist', {'a': 1, 'b': 2})
+print(dictionary_['c'])
+
+d = OrderedDict()
+d['a'] = 1
+d['b'] = 2
+
+d2 = OrderedDict()
+d2['b'] = 2
+d2['a'] = 1
+
+print(d2 == d)  # returns false
+
+# date module
+import datetime
+
+print(datetime.time())  # returns 00:00:00
+print(datetime.time(5,45,2))  # returns 05:45:02
+print(datetime.date.today())  #  returns today's date
+
+from time import time
+
+from array import array
+# an array is used to optimize list and saves array
+arr = array('i', [1,2,3])
+print(arr)
+print(arr[0])
