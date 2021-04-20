@@ -129,6 +129,20 @@ MODULES is a way of organizing codes,, each .py file is a module
 use snake case in naming modules
 a module has functions in them
 
+PACKAGE is a folder containing modules
+to import from a package, do import package_name.module_name
+in an ide a python package must have an __init__.py file, thats how a package is identified
+note that u can create a python package in anther python package
+PIP python install package
+
+Regular expressions are extremely useful in extracting information from text such as code, log files, spreadsheets,
+or even documents.
+A RegEx, or Regular Expression, is a sequence of characters that forms a search pattern.
+
+RegEx can be used to check if a string contains the specified search pattern.
+
+pdb is a class debugger
+
 questions
 
 1. y wasnt it cat(pets) and just cat() 17
@@ -142,3 +156,10 @@ note that pylint is a checker for code, to check if the syntax is ok
 5. explain folder 8 vidoe 6, authenticator decorator
 6. return and print in functions
 7. expian fibonacci exercise folder 9 video 5
+8. utility in module,, y isnt any other name working
+9. for the utility,py file, how do i see the pycache
+10.^= whats it used for.. i saw it in random module
+11. folder 11, video 6, video 7, video 8..... 9 to 14 didnt work
+12. debugging in python pdb folder 12
+13. file io folder 13
+14.
