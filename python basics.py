@@ -38,6 +38,9 @@ print(counter)
 for _ in range(10, 0, -2):
     print(list(range(10)))
 
+
+for _ in range(10, 0, -2):
+    print('email')
 for i, char in enumerate(list(range(100))):  # enumerate gives the index alongside
     if char == 50:
         print(f'index of 50: {i}')
@@ -107,7 +110,7 @@ def test(a):
 
 
 help(test)
-print(test.doc)
+# print(test.doc)
 
 
 def super_func(*args):  # this allows more than one argument
@@ -144,7 +147,7 @@ max_mercy([10, 20, 3, 4, 5, 11])
 # it assigns values to variables as part of a larger expression
 a = 'helloooooooooo'
 # if len(a) > 10:
-# print(f"too long {len(a)} elements")
+print(f"too long, {len(a)} elements")
 # using warlus operator to avoid repitition
 # if ((n := len(a)) > 10): #not used for python 3.7
 # print(f"too long {n} elements")

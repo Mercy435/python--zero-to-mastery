@@ -12,7 +12,7 @@ extend and rewrite. as codes get bigger, it helps us organize millions of codes
 code real life objects
 we can create our own class using the class keyword then the name of the class in camelcase(capitalize each word)
 #instantiate means creating instance(object) from a class
-a class is a blueprint for creating objects, it has properties and methods
+a class is a blueprint for creating objects, it has properties/attributes and methods
 The __init__() function is called automatically every time the class is being used to create a new object.
 when writing code, try to be DRY(do not repeat yourself)
 when a  function doesnt return anything, we get none
@@ -76,7 +76,7 @@ MRO - method resolution order
 shows u the order with which it checks, it uses the algorithmn depth first search-
 
 functional programming
-separates of concerns (each chunk concerns itself with one thing it is good at),
+separation of concerns (each chunk concerns itself with one thing it is good at),
 packaging codes into separate sensible functionally organized chunks,
 separates data and functions unlike oop(encapsulation).
 it emphasizes simplicity. functions operate on well defined data structure

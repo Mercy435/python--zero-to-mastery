@@ -12,7 +12,7 @@ def multiply_by2(li):
     new_list = []
     for item in li:
         new_list.append(item * 2)
-    print(new_list)  # this interacts with the screen, it has side effect.the print statement.. this not a pure function
+    print(new_list)  # this interacts with the screen, it has side effect the print statement.. this not a pure function
 
 
 multiply_by2([1, 2, 3])
@@ -128,7 +128,7 @@ print(my_list3)
 my_list4 = [num ** 2 for num in range(0, 100) if num % 2 == 0]  # generate list of even numbers=
 print(my_list4)
 
-my_set = {char for char in 'hello'}  # not l is not repeated
+my_set = {char for char in 'hello'}  # note l is not repeated
 print(my_set)
 my_set1 = {num for num in range(0, 100)}
 print(my_set1)

@@ -154,3 +154,21 @@ def fib2(number):
 
 
 print(fib2(20))
+
+
+def fib(n):
+    if n <= 2:
+        return 1
+    return fib(n - 1) + fib(n - 2)
+
+
+print(fib(3))
+
+M=[1, 2]
+def fibo(n):
+    if n not in M:
+       M[n]=fibo(n-1) + fibo(n-2)
+    return M[n]
+
+
+print(fibo(3))

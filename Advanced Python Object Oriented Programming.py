@@ -4,7 +4,7 @@ class BigObject:  # creating your class
     pass
 
 
-obj1 = BigObject()  # instantiate creating object
+obj1 = BigObject()  # instantiate means creating object
 obj2 = BigObject()  # instantiate
 obj3 = BigObject()  # instantiate
 print(type(obj1))
@@ -90,11 +90,12 @@ class PlayerCharacter:
         return num1 + num2
 
 
-# player1 = PlayerCharacter()
+player1 = PlayerCharacter()
 # print(player1.name)
 # print(player1.add_things(2, 3))
 player3 = PlayerCharacter.add_things(6, 3)  # method on the actual class(class method) to create another player
 print(player3.age)
+print(player1.add_things2(3,4))
 
 
 # 5 summary of oop
@@ -126,7 +127,7 @@ class User(object):  # class User: everything in python is from the base object
     def sign_in(self):
         print('logged in')
 
-    def attack(self):  # polymorphism doing wizard1.attack() overrides this cos the method is in the wizard class
+    def attack(self):  # polymorphism: doing wizard1.attack() overrides this cos the method is in the wizard class
         print('do nothing')
 
 
@@ -269,7 +270,7 @@ class Toy:
         return self.my_dict[i]
 
 
-action_figure = Toy('red', 0)
+action_figure = Toy('red', 10)
 print(action_figure)
 print(action_figure.color)
 print(action_figure.__str__())  # lines 273, 274 and 275 gives the same output
@@ -359,7 +360,8 @@ class F(D, E):
 
 print(F.mro())  # shows u the order with which it checks, it uses the algorithmn depth first search
 print(F.num)  # 1
-F.__str__
+print(F.__str__)
+
 
 
 class X: pass
