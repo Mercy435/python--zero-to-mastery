@@ -1,16 +1,12 @@
 import re
-
-# search - Returns a Match object if there is a match anywhere in the string
 txt = "The rain in Spain"
-x = re.search("^The.*Spain$", txt)
-print(x)
-
-txt = "The rain in Spain"
+# search  in Spain"
 x = re.search("\s", txt)
+print(x)
 print("The first white-space character is located in position:", x.start())
 # findall- Returns a list containing all matches
 # Return a list containing every occurrence of "ai":
-txt = "The rain in Spain"
+
 x = re.findall("ai", txt)
 print(x)
 txt = "The rain in Spain"

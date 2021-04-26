@@ -154,7 +154,33 @@ A RegEx, or Regular Expression, is a sequence of characters that forms a search 
 RegEx can be used to check if a string contains the specified search pattern.
 
 pdb is a class debugger
+set_trace is the most commonly used method under the pdb debugger takes u to an interactive pdb/python environment
+where u can see whats the bug on ur system
 
+file I/O - input/output
+
+
+web scrapping is grabbing data from web using python... download a web page, get data, clean it up and use
+website has a browser and a server which is  acomputer in the world that has the (html file which is the content of the
+website,css which gives the colors amd stylings the website has, javascript which allows diff behaviours on the website
+(submitting forms, drop down menus)
+“Web scraping,” also called crawling or spidering, is the automated gathering of data from an online source
+usually from a website
+applications of web scraping
+1. Social media sentiment analysis
+2. eCommerce pricing
+3. Investment opportunities
+4. Machine learning
+robots.txt is a way websites tell u wat u can or cannot scrape
+ Application prgramming interface API -- gives u permission for some website if u are a user
+ api is the easiest way to get data from a website
+ Googlebot is what google uses to index website- creates a database of all the web pages
+googlebot crawl website to see what info is useful for a user
+
+BeaautifulSoup is a library in python used to scrape websites , do pip install beautifulsoup4
+request helps us grab html files do pip install requests
+scrappy is a lot more functional than beautifulsoup, it can be used to scrape a website
+scrappy is a framework
 questions
 
 1. y wasnt it cat(pets) and just cat() 17
@@ -172,6 +198,8 @@ note that pylint is a checker for code, to check if the syntax is ok
 9. for the utility,py file, how do i see the pycache
 10.^= whats it used for.. i saw it in random module
 11. folder 11, video 6, video 7 sys isnt working... i cant call python3 1.py in the pycharm terminal
-12. debugging in python pdb folder 12
+12. have u used the   debugging in python pdb folder 12
 13. file io folder 13
 14. explain the .start method
+15. python3 is not working in the command
+16. folder 13, translator exercise file path is my issue
