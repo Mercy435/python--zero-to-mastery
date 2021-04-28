@@ -207,7 +207,7 @@ class Pets(object):
             print(animal.walk())
 
 
-class Cat(Pets):
+class Cat():
     is_lazy = True
 
     def __init__(self, name, age):
@@ -254,7 +254,7 @@ class Toy:
         self.my_dict = {'name': 'Yoyo', 'has_pets': False}
 
     def __str__(self):  # modifying dunder mthd str for object to behave in a certain way
-        return f'{self.color}'
+        return f'{self.color},{self.age}'
 
     def __len__(self):  # modifying len to suit ur function
         return 5
@@ -271,9 +271,9 @@ class Toy:
 
 
 action_figure = Toy('red', 10)
-print(action_figure)
+print(action_figure) # this calls str
 print(action_figure.color)
-print(action_figure.__str__())  # lines 273, 274 and 275 gives the same output
+print(action_figure.__str__())
 print(str('action_figure'))
 
 print(len(action_figure))
@@ -294,7 +294,8 @@ super_list1 = SuperList()  # object
 
 print(len(super_list1))
 super_list1.append(5)
-# print(super_list1[0])
+print(super_list1)
+print(super_list1[0])
 print(issubclass(SuperList, list))
 print(issubclass(list, object))
 print(issubclass(list, SuperList))

@@ -1,6 +1,5 @@
-'''
-my_file = open('test.txt')
 
+my_file = open(r'C:\Users\Isaac Alexander\Desktop\best.txt')
 
 print(my_file.read)
 # open to open the file
@@ -16,39 +15,38 @@ print(my_file.readline())
 print(my_file.readlines())
 # gives a list containing all of the contents of the file
 
-my_file.close() # closes the file
+my_file.close()  # closes the file
 
 # standard way to read a file
 
-with open('test.txt', mode='r') as my_file: # mode=r is for reading , its default
+with open(r'C:\Users\Isaac Alexander\Desktop\best.txt', mode='r') as my_file:  # mode=r is for reading , its default
+    print(my_file.readlines())  # returns text in a list and string
+
+with open(r'C:\Users\Isaac Alexander\Desktop\best.txt', mode='r+') as my_file:  # to read files and write to the file
+    text = my_file.write(' hey it\'s me!')  # to write to a file
     print(my_file.readlines())
 
-with open('test.txt', mode='r+') as my_file: # to read files and write to the file
-    text = my_file.write('hey it\'me!') # to write to a file
-    print(my_file.readlines())
-
-with open('test.txt', mode='a') as my_file: # a stands for append.. it appends to the end of the file
-    text = my_file.write('hey it\'me!') # to write to a file
-    print(my_file.readlines())
+with open(r'C:\Users\Isaac Alexander\Desktop\best.txt', mode='a') as my_file:  # a stands for append..
+    # it appends to the end of the file
+    text = my_file.write('hey it\'me!')  # to write to a file
+    # print(my_file.readlines())
 # mode = w helps to write in the code
 
 # to create a file that doesnt exist
-with open('sad.txt', mode = 'w') as my_file:
+with open('sad.txt', mode='w') as my_file:
     text = my_file.write(':(')
 
-
-#file path
-# to access  a file in a folder u can copy from the root user
-with open('name_of_folder\name_of_file.txt', mode = 'r') as my_file:
-    text = my_file.read()
-
-with open('./app/sad.txt', mode = 'w') as my_file: #current directory
+    # file path
+    # to access  a file in a folder u can copy from the root user
+    # with open(r'C:\Users\Isaac Alexander\Desktop\test.txt', mode='r') as my_file:
+    #     text = my_file.read()
+    #
+    # with open('./app/sad.txt', mode='w') as my_file:  # current directory
+    #     text = my_file.write(':(')
+    # with open('../app/sad.txt', mode='w') as my_file:  # go one directory back
     text = my_file.write(':(')
 
-with open('../app/sad.txt', mode = 'w') as my_file: #go one directory back
-    text = my_file.write(':(')
-
-#pathlib is  an object oreinted file system, a built in module
+# pathlib is  an object oreinted file system, a built in module
 
 # file errors
 # use the try block
@@ -57,21 +55,26 @@ try:
         text = my_file.read()
 except FileNotFoundError as err:
     print('file does not exist')
-    raise err # gives FileNotFoundError
+    raise err  # gives FileNotFoundError
 except IOError as err:
     print('IO error')
     raise err
-'''
+
+with open(r'C:\Users\Isaac Alexander\Desktop\test.txt', mode='a') as my_file:  # a stands for append..
+    # it appends to the end of the file
+    text = my_file.write('my name is mercy isaac')
+
+
 # translator exercise
 from translate import Translator
 
 translator = Translator(to_lang='ja')  # ja for japanese
 try:
-    with open('./test.txt', mode='r') as my_file:
+    with open(r'C:\Users\Isaac Alexander\Desktop\test.txt', mode='r') as my_file:
         text = my_file.read()
         translation = translator.translate(text)
         print(translation)
-        with open('./test-ja.txt', mode='w') as my_file2: # to create a new file to store the translation
+        with open('test-ja.txt', mode='a') as my_file2:  # to create a new file to store the translation
             my_file2.write(translation)
 except FileNotFoundError as e:
     print('check your file path')

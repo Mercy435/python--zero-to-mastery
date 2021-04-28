@@ -75,15 +75,17 @@ def performance(fn):
     from time import time
 
     def wrapper(*args, **kwargs):
-        t1 = time()
+        t1 = time() # current time
+        print(t1)
         result = fn(*args, **kwargs)
-        t2 = time()
-        print(f'it took {t2 - t1}s')  # it took 0.20325016975402832ms to get reult
+        t2 = time() # time after code is ran
+        print(t2)
+        print(f'it took {t2 - t1}s')  # it took 0.20325016975402832ms to get result
         return result
 
     return wrapper
 
-
+# applying decorator to function
 @performance
 def long_time():
     for i in range(10000000):
@@ -93,7 +95,7 @@ def long_time():
 long_time()
 
 # authenticator decorator exercise
-# Create an @authenticated decorator that only allows the function to run is user1 has 'valid' set to True:
+# Create an @authenticated decorator that only allows the function to run if user1 has 'valid' set to True:
 
 
 user1 = {'name': 'Sorna', 'valid': True}
@@ -103,7 +105,7 @@ def authenticated(fn):
     def wrapper(*args, **kwargs):
         if args[0]['valid']:
             return fn(*args, **kwargs)
-        return wrapper
+    return wrapper
 
 
 @authenticated

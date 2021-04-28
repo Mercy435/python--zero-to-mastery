@@ -1,5 +1,5 @@
 # import utility
-'''
+
 # print(utility)
 # import shopping.more_shopping.shopping_cart
 
@@ -62,6 +62,7 @@ answer = randint(1, 10)
 # 3. check that input is a no from 1-10
 # 4. check if no is the right guess, otherwise
 # 5. ask user for input again
+
 while True:
     guess = int(input("guess a number 1-10: "))
     try:
@@ -95,12 +96,26 @@ while True:
         print('please enter a number')
         continue
 
+while True:
+    try:
+        guess = int(input("guess a number 1-10: "))
+        if 0 < guess < 11:
+            if guess == answer:
+                print('you are a genius!')
+                break
+        else:
+            print('hey bozo, I said 1~10')
+    except ValueError:
+        print('please enter a number')
+        continue
+
+
 
 import platform
 
 x = platform.system()  # prints windows
 print(x)
-'''
+
 import pyjokes
 
 joke = pyjokes.get_joke('en', 'neutral')
@@ -147,3 +162,6 @@ from array import array
 arr = array('i', [1,2,3])
 print(arr)
 print(arr[0])
+
+import mercy as m
+print(m.my_name())

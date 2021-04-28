@@ -1,4 +1,5 @@
 # 1
+'''
 while True:
     try:
         user_input = input('enter a number you are thinking or enter q to exit: ')
@@ -14,6 +15,20 @@ while True:
                 print('please enter a number between 1 and 1000')
     except ValueError:
         print('please enter a number')
+
+#2
+input_ = input('Whats on your mind today?: ')
+separate = input_.split(' ')
+word_count = len(separate)
+print(f"oh nice, you just told me what's on your mind in {word_count} words!")
+'''
+with open(r'C:\Users\Isaac Alexander\Desktop\test.txt', mode='r') as my_file:
+    content = my_file.read()
+    print(content)
+    slit = content.split(' ')
+    length = len(slit)
+    print(f"oh nice, you just told me what's on your mind in {length} words!")
+
 
 
 

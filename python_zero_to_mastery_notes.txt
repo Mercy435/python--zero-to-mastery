@@ -181,25 +181,49 @@ BeaautifulSoup is a library in python used to scrape websites , do pip install b
 request helps us grab html files do pip install requests
 scrappy is a lot more functional than beautifulsoup, it can be used to scrape a website
 scrappy is a framework
-questions
 
-1. y wasnt it cat(pets) and just cat() 17
-2. # lines 273, 274 and 275 gives the same output
-questions on python
-1. video on 5 , 11, gui
-note that pylint is a checker for code, to check if the syntax is ok
-2.  lines 273, 274 and 275 gives the same output
-3.  print(super_list1[0]) line 296
-4. explain folder 8 vidoe 5, performance decorator
-5. explain folder 8 vidoe 6, authenticator decorator
-6. return and print in functions
-7. expian fibonacci exercise folder 9 video 5
-8. utility in module,, y isnt any other name working
-9. for the utility,py file, how do i see the pycache
-10.^= whats it used for.. i saw it in random module
-11. folder 11, video 6, video 7 sys isnt working... i cant call python3 1.py in the pycharm terminal
-12. have u used the   debugging in python pdb folder 12
-13. file io folder 13
-14. explain the .start method
-15. python3 is not working in the command
-16. folder 13, translator exercise file path is my issue
+Testing helps solve the issue of adding codes by diff developers abd debugging
+a test is another python file
+each module should have a test file to run test on
+its for development of products, customers dont get to see it
+python -m unittest runs all of the tests
+python -m unittest -v (verbose) shows other info
+careers in python
+1. machune learning
+2. testing/automation
+3. research analyst
+4. data scientist
+5. software engineer
+6. backend devloper
+7. pythpon developer
+8. data analyst
+
+github helps u build ur experience, contribute to open source projects(look at zero to mastery on github)
+website esp for a full stack or front end developer or designer, talk about how u built it, showcase ur works
+do one or two big projects that stand out e.g. face recognition
+have a blog e.g on medium
+
+python can be used for
+ml
+emails'twitter bots
+data visualizatin
+data analysis
+data scrapping
+image processing
+web dev
+scripting
+automation
+file processing
+
+
+questions
+1. line9 in test.py
+2. test2 didnt run
+3. do the 100 python questions
+4. go back to folder 16
+5. do  a website from the free sites without building from scratch
+6. do the job board thing on the xero to mastery github link still on folder 16
+
+
+
+

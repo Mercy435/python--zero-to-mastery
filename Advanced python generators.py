@@ -1,6 +1,6 @@
 # generators allow us generate sequence of values over time. uses keyword yield and it can pause and resume functions
 # range is a generator,
-'''
+
 range(100)
 list(range(100))
 
@@ -82,8 +82,8 @@ def gen_fun(num):
     for i in range(num):
         yield i
 
-for item in gen_fun(100)
-
+for item in gen_fun(100):
+    pass
 
 # under the hood of generators
 def special_for(iterable):
@@ -137,7 +137,7 @@ def fib(number):
 
 for item in fib(200):
     print(item)
-'''
+
 
 
 # 2 using list
