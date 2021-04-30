@@ -10,6 +10,7 @@
 # print(buy('apple'))
 
 # from utility import multiply, divide, max
+'''
 from utility import *  # this imports all functions in utility
 
 print(divide(5, 2))
@@ -48,6 +49,12 @@ import sys
 
 print(sys)  # built in module
 sys.argv
+#sys module
+import sys
+first =sys.argv[1]
+last =sys.argv[2]
+
+print(f'hiiiiiii! {first}, {last}'
 
 # gaming guess exercise
 
@@ -77,11 +84,12 @@ while True:
         print("please enter a number")
         continue # this goes back to the while loop
 # give it ur start and last parameter using sys
-
+'''
+#using sys.argv you give the prgram the first and last parameters when u call it in the terminal
 import sys
 import random
 
-answer = random.randint(int(sys.argv[1]), int(sys.argv[2]))
+answer = random.randint(int(sys.argv[1]), int(sys.argv[2])) #when calling the program on the terminal, pass 1 10
 
 while True:
     try:
@@ -96,21 +104,9 @@ while True:
         print('please enter a number')
         continue
 
-while True:
-    try:
-        guess = int(input("guess a number 1-10: "))
-        if 0 < guess < 11:
-            if guess == answer:
-                print('you are a genius!')
-                break
-        else:
-            print('hey bozo, I said 1~10')
-    except ValueError:
-        print('please enter a number')
-        continue
 
 
-
+'''
 import platform
 
 x = platform.system()  # prints windows
@@ -165,3 +161,4 @@ print(arr[0])
 
 import mercy as m
 print(m.my_name())
+'''

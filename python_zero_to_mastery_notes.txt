@@ -168,7 +168,8 @@ website,css which gives the colors amd stylings the website has, javascript whic
 usually from a website
 applications of web scraping
 1. Social media sentiment analysis
-2. eCommerce pricing
+2. eCommerce pricing  and sales - price monitoring and lead pricing
+- to get data and see trends to know the best time to invest
 3. Investment opportunities
 4. Machine learning
 robots.txt is a way websites tell u wat u can or cannot scrape
@@ -216,6 +217,17 @@ automation
 file processing
 
 
+
+scripting is writing script.. being more efficient with the power of the code
+image processing
+do a pip install pillow for processing image
+python image library, pil, its not compatible with pillow
+pil was forked to pillow
+learn to choose the right library
+
+scripting in python helps in image processing, processing tons of images at a short time
+
+
 questions
 1. line9 in test.py
 2. test2 didnt run
@@ -223,7 +235,7 @@ questions
 4. go back to folder 16
 5. do  a website from the free sites without building from scratch
 6. do the job board thing on the xero to mastery github link still on folder 16
-
-
+7. scripting, images.py file, f0older 17, vidoe 4.. permissionerror
+8. jpgtopngconverter line 22 23 errors for 22 ocntinuous loop then error
 
 
