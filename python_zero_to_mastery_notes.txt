@@ -227,6 +227,25 @@ learn to choose the right library
 
 scripting in python helps in image processing, processing tons of images at a short time
 
+opencv is a library used for ml,, self driving cars. opencv is used for image and video processing
+email is a built in module in python
+smtplib is a lib for email sending, allows create an smtp server which communicates the lang of the server
+smtp-simple mail transfer protocol it is used to send email while pop, post office protocol or
+imap internet message access protocol are used to retrieve mails at the receivers end
+hackers uses dictionary attack like a dic in python using a brute force attack to loop through a list of hackd account
+and password
+
+hashing a password turns a password to anther form that isn't easily seen.. use the hash generator SHA1
+k anonymity allows somebody receive info about us and still not know who we are
+
+a hash function is a function that generates a value of fixed length for each input it gets.. e,g md5hash generator,
+sha1,sha256 generators
+hash functions are one way...if i give u the hash function, u can never know what the input was
+hash functions are fixed for a fixed input..its capital case sensitive
+idempotent - a function given an input, always gives the same output
+
+hash tables collects keys and we know where things are in the memory
+sha-256 hash generator takes longer time and is used in photography
 
 questions
 1. line9 in test.py
@@ -237,5 +256,8 @@ questions
 6. do the job board thing on the xero to mastery github link still on folder 16
 7. scripting, images.py file, f0older 17, vidoe 4.. permissionerror
 8. jpgtopngconverter line 22 23 errors for 22 ocntinuous loop then error
-
+9. explore opencv
+10. find why pyPDF2 isnt working
+12. line 68 checkmypass.py,, y 1: and y does it loop when i do 0, 1
+13. try run password from text for checkmypass.opy
 
