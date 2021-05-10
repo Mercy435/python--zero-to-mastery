@@ -427,4 +427,4 @@ questions
 21, folder 19, duplicate not in my options 06:23
 22, explain folder 19,, y was it the form we erased  from the tahnkyou.html-
 23, do thank you name using{{}}
-24, folder 21, newline in their position is giving tyeperror
+24, folder 21, newline in their positioqn is giving tyeperror

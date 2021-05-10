@@ -1,0 +1,14 @@
+import tensorflow as tf
+from imageai.Classification import ImageClassification
+import os
+
+execution_path = os.getcwd()
+
+prediction = ImageClassification()
+prediction.setModelTypeASMobileNetV2()
+prediction.setModelPath(os.path.join(execution_path, "MobileNetV2 _imagenet_tf.2.0.h5"))
+prediction.loadModel()
+
+predictions, probabilities = prediction.classifyImage(os.path.join(execution_path, "18.1 giraffe.jpg"), result_count=5 )
+for eachPrediction, eachProbability in zip(predictions, probabilities):
+    print(eachPrediction , " : " , eachProbability)
