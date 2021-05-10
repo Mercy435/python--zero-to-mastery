@@ -247,17 +247,184 @@ idempotent - a function given an input, always gives the same output
 hash tables collects keys and we know where things are in the memory
 sha-256 hash generator takes longer time and is used in photography
 
+
+WEB DEV WITH PYTHON
+how web works
+when we type a  website into a browser makes request to a machine, a computer(server located anywhere in the world), looks
+for who owns the website, what machine can serve details of the website...servers communicate over http/https
+http/https is the lang or protocol our computer and the server communicate with
+the server has three files
+a. html file which is the text or content of the website
+b. css file which contains the styling of the website( fonts, color, position of elements)
+c. js which gives a website behaviour( allows functionality,,, log in, tweet....) we are allowed to take actions,
+interact with the site
+
+the three files are then sent to the browser and it is displayed for us to see
+
+python programmers can write the logic and rules the servers work upon
+in creating websites
+write html file, write css file and js file and ref in the html file for it to reflect, on the website,
+go to developers function and refresh
+write css at the head of th html file and js at the bottom og the body
+src for js stands for source
+
+flask is a framework used for building server, it has added tools, security benefits..is a microframework..a small lib
+to do things fast
+django is a large framework for python
+
+follow the flask documentation, do an install, create venv... follow the commands to get a route /link that returns
+what your decorated function wants
+setflask_app = naem_of_file
+we can set flask_app = anyname e.g server.py or superduper
+then do python -m flask run
+
+go to debug mode documentation to turn it on
+type set flask_env = development to put it in dev mode and once u make changes and save, the debugger automatically
+detects it.. when u refresh on ur website, change is effected
+
+flask converts text strings to html files automatically
+note that if we have tw routes with same url end,, the first one will be executed first
+
+in the flask documentation we see static files
+they are files that would not be changed e.g. css and js files.. create a static folder for them  while we create a
+templates folder for html
+
+favicon is an icon used by browsers for tab and bookmarks. it distinguishes your website and gives it a unique brand
+
+{{}} flask sees this as it needs to be evaluated as python .. it uses a templating lang called jinja
+jinja helps dynamically update parts of the page {{}}
+
+url parameters
+variable names
+uuid -unique identifier
+int
+
+twilio is the go tool for sms
+WSGI- web server gate interface
+MIME type-multipurpose internet mail extensions.... it indicates the nature and format of a file
+Browsers use the MIME type, not the file extension, to determine how to process a URL, so it's important that web
+servers send the correct MIME type in the response's Content-Type header
+it helps in data transfer btw browser and server
+
+creating my portfolio
+map files are for debugging
+gz are zipped and compressed files to reduce size of files
+
+crtl+g to add all instances at once
+
+since we arent using components.html,  go to index.html, navbar and remove components.. remove components
+from all of the html files
+
+the ideal is for html to display pages and also use form to send data to the server, using action atribute
+we can put post or get at the action tab
+
+front end -- css java html for browser side
+back end -- python flask django for server side
+database end is also backend e.g.mongodb
+
+DATABASE- collection of data(many forms, int, date).. allows us organize data in a useful form
+database management system DBMS - collection of programs that allow us access databases and work with data, allows
+control and access to database users
+helps us update, insert, select data
+types of DBMS
+1. postgreSQl,mysql,sqlite,sybase, hypersql- relational DBMS : have two or more tables, columns and rows.. each row rep
+an entry.. schema is relation btw rows and fields
+all relational bases uses sql
+stores all users in a table e.g tweets
+sql helps us communicate with the database and server just like http with website and server
+2. non relational DB, NOSQL DB (hypertable, mongodb,redis,cassandra),, hlps build an application without
+predefining a schema. used for unstructured data,, they are like folders... doc oriented..
+stores each user as a doc e.g linkedin
+they communicate with a query language e,g,mongodb query language
+
+Databases to use depend on ur need
+back end developer
+node server
+database
+
+
+Testing and automation
+selenium is one of the best tools for automation with python
+it helps interact with the browser without human involvement,, it uses code
+each brows er(chrome,edge,firefox,safari) have their own drivers
+install the driver of the browser(chrome) you want to use to automate things
+latest browsers are stable(maybe current releases that havent been tested enough)
+
+MachineLearning Nd Datascience
+application
+robots, self driving cars, voice processing, lang processing, predictions
+ml helps to make machines more and more like humans
+AI- human intelligence exhibited by machines,, machines that act as human,,,NarrowAI where machines are as good or even
+better at certain tasks than humans e.g.detection heart diseases, ... machines are good at one thing and not diverse
+things like humans.... General AI is where machines can be exceptionally god at diverse things like humans
+
+ML is a subset of AI,,, an approach to get AI thru systems that find pattern in a set of data
+getting machines to act without being explicitly programmed
+
+Deep learning(Deep neural network) is one of the techniques for implementing ML,, its a type of algorithm
+
+Data Science over laps ML.... analysing data for a business goal
+
+Machine Learning
+programs are often procedural(if this then this,, we give computer input and function)
+for ML we give input, output ,, and allow it figure out the function/model/algorithm/brain/bot
+
+history of data
+spreadsheet(csv, excel)-----relational DB(tables, columns and rows)---Big Data(Nosql(mongodb)---- ML
+
+use machines to predict result based on data given
+
+machine learning
+1. supervised learning- data already has categories,, label data, text data to know if functions are right ir wrong
+we do classification(draw a line to make a decision of output) and regression(predicting stock prices)
+
+2. unsupervised learning- data without labels.. we use clustering to create the groups giving it a bunch of data points
+or we use association rule learning(associate diff things to make predictions), we cant tell the machine if they are
+right or wrong
+
+3. reinforcement- we use trial and error e.g a machine learns a game by playing on and on till it gets the highest score
+(skill acquisition and real time learning)
+
+Machine 101
+1. import the data
+2. clean the data
+3. split the data into training set and test set(80 rows of a dataset are given to a machine to learn from and 20 rows
+of our preexisting data is used to test if the algorithm is good or bad
+training set is input
+4. create a model- import thr algorithm from sciki learn(decision trees, svm, KNN-k nearest neighbor)
+5. check the output using the test set
+6, improve
+
+Tools for ML
+Numpy- lib that help us use list and multidimensional arrays
+Pandas - lib used for data analysis.. helps manipulate data in rows and columns,, data are extracted into DataFrames
+scikit-learn: helps to create a model
+matplotlib : a charting lib,, allows us visualize data
+jupyternotebooks: useful for Ml and data science,, helps step through processes, keep track of codes, see visualizations
+it helps communication
+kaggle: community of mk experts, free access to data
+
+data in csv format can easily be worked on by pandas
+in pandas we get output as df
+pd.read_csv
+
+
+
 questions
-1. line9 in test.py
-2. test2 didnt run
+
 3. do the 100 python questions
 4. go back to folder 16
 5. do  a website from the free sites without building from scratch
 6. do the job board thing on the xero to mastery github link still on folder 16
-7. scripting, images.py file, f0older 17, vidoe 4.. permissionerror
-8. jpgtopngconverter line 22 23 errors for 22 ocntinuous loop then error
 9. explore opencv
-10. find why pyPDF2 isnt working
-12. line 68 checkmypass.py,, y 1: and y does it loop when i do 0, 1
-13. try run password from text for checkmypass.opy
-
+10. go back to pyPDF2
+14, check mail and do twitter bot
+15, do sms part, cant verify number at twilio
+15, look at try.py
+18, web dev folder 15, y do we have work.html and works.html
+19, add ur project to the site video 16 content
+20, network doesnt show some files like favicon, w_env.js folder 19
+21, folder 19, duplicate not in my options 06:23
+22, explain folder 19,, y was it the form we erased  from the tahnkyou.html-
+23, do thank you name using{{}}
+24, folder 21, newline in their position is giving tyeperror

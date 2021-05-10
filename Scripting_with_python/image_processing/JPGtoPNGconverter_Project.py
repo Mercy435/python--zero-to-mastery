@@ -4,6 +4,7 @@ import sys
 import os
 from PIL import Image
 
+
 # grab first and second argument # use the sys.argv to assign the folders
 image_folder = sys.argv[1]
 output_folder = sys.argv[2]  # run in terminal
@@ -21,8 +22,9 @@ if not os.path.exists(output_folder):
 for filename in os.listdir(image_folder):  # listdir lists items in dir
     img = Image.open(f'{image_folder}{filename}')  # open the images in the right path
     # img = Image.open(r'/imagejpg/')
-    # clean_name = os.path.splitext(filename) # this gives the name and the extension in a tuple, do an index to assess
+    clean_name = os.path.splitext(filename) # this gives the name and the extension in a tuple, do an index to assess
 #     only the name
+    print(clean_name)
     clean_name = os.path.splitext(filename)[0]
     # print(clean_name)
     img.save(f'{output_folder}{clean_name}.png', 'png')

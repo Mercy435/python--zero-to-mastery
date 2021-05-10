@@ -56,6 +56,7 @@ def pwned_api_check(password):
 
 
 def main(args):
+    print(args)
     for password in args:
         count = pwned_api_check(password)
         if count:

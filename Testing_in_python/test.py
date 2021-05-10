@@ -4,6 +4,7 @@ import main
 
 class TestMain(unittest.TestCase):
     def setUp(self):  # sets up before start of test
+
         print('about to run a function')  # this is printed before each test
 
     def test_do_stuff(self):
@@ -24,12 +25,12 @@ class TestMain(unittest.TestCase):
     def test_do_stuff3(self):
         test_param = None
         result = main.do_stuff(test_param)
-        self.assertIsInstance(result, 'please enter a number')
+        self.assertEqual(result, 'please enter a number')
 
     def test_do_stuff4(self):
         test_param = ''
         result = main.do_stuff(test_param)
-        self.assertIsInstance(result, 'please enter a number')
+        self.assertEqual(result, 'please enter a number')
 
     def tearDown(self):  # at the end of test
         print('cleaning up')  # printed after each test

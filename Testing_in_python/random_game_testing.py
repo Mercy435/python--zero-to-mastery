@@ -16,7 +16,7 @@ if __name__ == '__main__':
     while True:
         try:
             guess = int(input("guess a number 1-10: "))
-            if (run_guess(guess, answer)):
+            if run_guess(guess, answer):
                 break
         except ValueError:
             print('please enter a number')
