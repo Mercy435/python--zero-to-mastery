@@ -23,9 +23,9 @@ with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
 
 import smtplib
 from email.message import EmailMessage
-# string template is used to substitute variables inside text using $
+# string templates is used to substitute variables inside text using $
 from string import Template
-# to access html and convert it to text and read with template
+# to access html and convert it to text and read with templates
 from pathlib import Path  # or use the os.path
 
 html = Template(Path('index.html').read_text())

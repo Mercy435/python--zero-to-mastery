@@ -33,7 +33,7 @@ for i in listings:
     coins[str(i['id'])] = i['slug']
 
 
-# creating a template of needed info
+# creating a templates of needed info
 market_cap = []
 volume = []
 timestamp = []

@@ -407,9 +407,10 @@ kaggle: community of mk experts, free access to data
 data in csv format can easily be worked on by pandas
 in pandas we get output as df
 pd.read_csv
+Every module in Python has a special attribute called __name__. The value of __name__ attribute is set to “__main__” when module is run as main program. Otherwise, the value of __name__ is set to contain the name of the module.
+We use if __name__ == “__main__” block to prevent (certain) code from being run when the module is imported.
 
-
-
+[-
 questions
 
 3. do the 100 python questions
@@ -417,14 +418,14 @@ questions
 5. do  a website from the free sites without building from scratch
 6. do the job board thing on the xero to mastery github link still on folder 16
 9. explore opencv
-10. go back to pyPDF2
-14, check mail and do twitter bot
-15, do sms part, cant verify number at twilio
-15, look at try.py
-18, web dev folder 15, y do we have work.html and works.html
 19, add ur project to the site video 16 content
-20, network doesnt show some files like favicon, w_env.js folder 19
-21, folder 19, duplicate not in my options 06:23
-22, explain folder 19,, y was it the form we erased  from the tahnkyou.html-
 23, do thank you name using{{}}
-24, folder 21, newline in their positioqn is giving tyeperror
+what are the benefits of python and what are the shortcomings
+
+API application programming language
+HTML hyper tect markup lang
+
+bash is a type of shell a terminal can have; it is a casing around the terminal that is customizable
+others are fish shell, oh my zsh
+
+1. bonus 23 video 6
