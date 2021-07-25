@@ -32,20 +32,69 @@ with open(r'C:\Users\Isaac Alexander\Desktop\test.txt', mode='r') as my_file:
     print("oh nice, you just told me what's on your mind in", int(length),  "words!")
 
 # 3
+while True:
+    try:
+        goals = input('what are your personal goals? ')
+        while True:
+            name = input('whats your name: first and last name? ')
+            name.split(" ")
+            first_name= name[0].isalpha()
+            last_name=name[1].isalpha()
+            if first_name and last_name:
+                break
+            else:
+                print("enter a valid name")
+                continue
+        while True:
+            month=input("input your month of birth in this format,Jan: ")
+            month=month.capitalize()
+            day = input("input your day of birth as a number: ")
+            year = input("input your year of birth: ")
+            DateOfBirth = month + ' ' + day + ', ' + year
+            if month.isalpha() and len(month) == 3:
+                if day.isnumeric():
+                    if year.isnumeric():
+                        break
+                    else:
+                        print('oops! not a valid year: ')
+                        continue
+                else:
+                    print('please enter a valid number')
+                    continue
+            else:
+                print('oops! month is not in the right format')
+                continue
+        while True:
+            num= input("input the number of your street: ")
+            street= input('whats your street in this form: bola close, fifth ave, alh street ')
+            city = input("input your city of residence: ")
+            street.split(" ")
+            first_ = street[0].isalpha()
+            last_= street[1].isalpha()
+            address = num + ' ' + street + ', ' + city
+            if num.isnumeric():
+                if first_ and last_:
+                    if city.isalpha():
+                        break
+                    else:
+                        print('enter a valid city')
+                else:
+                    print('enter the correct street')
+            else:
+                print('input a correct city')
+                continue
+        while True:
+            email = input('whats your email address? ')
+            if '@' and '.com' in email:
+                break
+            else:
+                print('email not in the correct format')
+                continue
+    finally:
+        print(f"- Name: {name}\n- Date of birth: {DateOfBirth}\n- Address: {address}\n- Personal goals:{goals}\n"
+              f"-email:{email}")
+    break
 
-try:
-    name = input('whats your name? ')
-except ValueError:
-    print('enter a valid value')
-    # dob = input('whats your date of birth? ')
-    # address = input('whats your address? ')
-    # goals = input('what are your personal goals? ')
-    # email = input('whats your email address? ')
-# except ValueError:
-#     print('please enter a valid value')
-# try:
-#
-# except TypeError:
 
 
 # 4 acronym
@@ -108,7 +157,7 @@ if split_domain_name in domain_names.keys():
 else:
     print(f"Hey {name}, looks like you've got your own custom setup at {split_domain_name}. Impressive!")
 
-# 7 contact book
+# 8 contact book
 class ContactBook:
     name = 'local'
     def __init__(self, name, address, phone, email):
@@ -119,3 +168,15 @@ class ContactBook:
 
 person1=ContactBook('John', 'Arena', '08067899011', 'John@gmail.com')
 print(person1.name)
+
+
+
+
+    # using python csv module to write and save as it is better than txt
+    def write_to_csv(data):
+        with open('database.csv', mode='a', newline='') as database2:  # a to append
+            email = data["email"]
+            subject = data["subject"]
+            message = data["message"]
+            csv_writer = csv.writer(database2, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+            csv_writer.writerow([email, subject, message])

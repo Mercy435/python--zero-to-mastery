@@ -122,6 +122,7 @@ def submit_form():
 # we redirect to the thank you page after contact has been submitted by importing redirect module in line 1054
 
 
+
 # SAVING INPUT DATA SO IT IS NOT LOST
 # create a text file called database to store info the server receives
 # databases are a way to store data in a safe way , away from the server

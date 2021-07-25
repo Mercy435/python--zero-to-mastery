@@ -423,7 +423,7 @@ questions
 what are the benefits of python and what are the shortcomings
 
 API application programming language
-HTML hyper tect markup lang
+HTML hyper text markup lang
 
 bash is a type of shell a terminal can have; it is a casing around the terminal that is customizable
 others are fish shell, oh my zsh
